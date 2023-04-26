@@ -1,0 +1,23 @@
+.cardContainer {
+  width: 300px;
+  height: 150px;
+
+  .cardContent {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: 400;
+
+    .value {
+      display: inline-flex;
+      align-items: center;
+      flex-direction: row;
+      font-weight: 700;
+
+      .predictValue {
+        opacity: 0.5;
+      }
+    }
+  }
+}

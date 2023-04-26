@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Charts } from './charts/Charts';
+import { Card } from './card/Card';
+import styles from './App.module.scss';
 
 function App() {
+  const data = [
+    {
+      name: 'НИТ',
+      value: {
+        current: 234840,
+        pending: 246051,
+      },
+    },
+    {
+      name: 'Прогноз',
+      value: {
+        current: 272289,
+        pending: 283500,
+      },
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.appContainer}>
+      <div className={styles.chartWrapper}>
+        <Charts data={data} />
+        <div className={styles.cardWrapper}>
+          <Card data={data} />
+        </div>
+      </div>
     </div>
   );
 }

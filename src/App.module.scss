@@ -1,0 +1,14 @@
+.appContainer {
+  display: flex;
+  justify-content: center;
+
+  .chartWrapper {
+    position: relative;
+
+    .cardWrapper {
+      position: absolute;
+      bottom: -15px;
+      left: 180px;
+    }
+  }
+}
